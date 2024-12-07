@@ -1,4 +1,4 @@
-package pl.codehouse.restaurant.worker;
+package pl.codehouse.restaurant;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
