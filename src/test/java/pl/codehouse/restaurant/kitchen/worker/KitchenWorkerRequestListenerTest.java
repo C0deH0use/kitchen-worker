@@ -1,4 +1,4 @@
-package pl.codehouse.restaurant.worker;
+package pl.codehouse.restaurant.kitchen.worker;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
@@ -22,9 +22,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import pl.codehouse.restaurant.kitchen.Command;
 import pl.codehouse.restaurant.kitchen.Context;
 import pl.codehouse.restaurant.kitchen.ExecutionResult;
-import pl.codehouse.restaurant.kitchen.worker.CookMenuItemCommand;
-import pl.codehouse.restaurant.kitchen.worker.KitchenWorkerRequestListener;
-import pl.codehouse.restaurant.kitchen.worker.KitchenWorkerRequestMessage;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 
