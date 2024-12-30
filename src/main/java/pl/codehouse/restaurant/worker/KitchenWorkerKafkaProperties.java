@@ -1,9 +1,8 @@
 package pl.codehouse.restaurant.worker;
 
+import java.util.Map;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.kafka.support.KafkaHeaders;
-
-import java.util.Map;
 
 /**
  * Configuration properties for Kafka topics related to kitchen worker operations.
@@ -24,8 +23,7 @@ public record KitchenWorkerKafkaProperties(
      * for publishing messages to the configured topic.
      *
      * @return A Map containing Kafka headers with the topic name.
-     *         The key is the Kafka header name (KafkaHeaders.TOPIC),
-     *         and the value is the configured topic name.
+     *      The key is the Kafka header name (KafkaHeaders.TOPIC) and the value is the configured topic name.
      */
     public Map<String, Object> kafkaHeaders() {
         return Map.of(

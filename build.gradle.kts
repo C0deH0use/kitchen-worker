@@ -40,12 +40,9 @@ idea {
 }
 
 dependencies {
-	runtimeOnly("org.postgresql:postgresql")
-	runtimeOnly("org.postgresql:r2dbc-postgresql")
-
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
+	implementation("org.springframework.boot:spring-boot-starter-webflux")
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
-	implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
 	implementation("org.springframework.kafka:spring-kafka")
 
 	implementation("com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}")
@@ -53,15 +50,6 @@ dependencies {
 	implementation("com.fasterxml.jackson.core:jackson-annotations:${jacksonVersion}")
 
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
-	testImplementation("org.springframework.boot:spring-boot-testcontainers")
-	testImplementation("io.projectreactor:reactor-test")
-	testImplementation("org.springframework.kafka:spring-kafka-test")
-	testImplementation("org.testcontainers:junit-jupiter")
-	testImplementation("org.testcontainers:kafka")
-	testImplementation("org.testcontainers:postgresql")
-	testImplementation("org.testcontainers:r2dbc")
-	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 testing {
@@ -74,8 +62,6 @@ testing {
 				implementation("org.springframework.boot:spring-boot-starter-test") {
 					exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 				}
-				implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-				implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
 				implementation("org.springframework.kafka:spring-kafka-test")
 
 				implementation("org.junit.jupiter:junit-jupiter:$junitVersion")
@@ -107,15 +93,12 @@ testing {
 				implementation(sourceSets.test.get().runtimeClasspath)
 				implementation(project.dependencies.platform("org.springframework.boot:spring-boot-dependencies:3.2.3"))
 
-				implementation("org.flywaydb:flyway-core")
-				implementation("org.flywaydb:flyway-database-postgresql")
 
 				implementation("org.springframework.boot:spring-boot-testcontainers")
 
 				implementation("org.testcontainers:junit-jupiter")
 				implementation("org.testcontainers:kafka")
 				implementation("org.testcontainers:postgresql")
-				implementation("org.testcontainers:r2dbc")
 			}
 		}
 	}
