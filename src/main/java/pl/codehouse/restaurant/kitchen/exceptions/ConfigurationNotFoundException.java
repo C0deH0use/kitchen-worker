@@ -1,4 +1,4 @@
-package pl.codehouse.restaurant.exceptions;
+package pl.codehouse.restaurant.kitchen.exceptions;
 
 /**
  * Exception thrown when a Configuration is not found.

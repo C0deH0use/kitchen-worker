@@ -7,10 +7,13 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import pl.codehouse.restaurant.Context;
-import pl.codehouse.restaurant.ExecutionResult;
-import pl.codehouse.restaurant.exceptions.ConfigurationNotFoundException;
-import pl.codehouse.restaurant.shelf.ShelfService;
+import pl.codehouse.restaurant.kitchen.Context;
+import pl.codehouse.restaurant.kitchen.ExecutionResult;
+import pl.codehouse.restaurant.kitchen.exceptions.ConfigurationNotFoundException;
+import pl.codehouse.restaurant.kitchen.worker.CookMenuItemCommand;
+import pl.codehouse.restaurant.kitchen.worker.KitchenWorkerRequestMessage;
+import pl.codehouse.restaurant.kitchen.worker.MenuItemsCookingTimes;
+import pl.codehouse.restaurant.kitchen.shelf.ShelfService;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 

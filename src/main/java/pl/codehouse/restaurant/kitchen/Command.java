@@ -1,4 +1,4 @@
-package pl.codehouse.restaurant;
+package pl.codehouse.restaurant.kitchen;
 
 import reactor.core.publisher.Mono;
 

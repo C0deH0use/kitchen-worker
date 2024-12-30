@@ -19,9 +19,12 @@ import org.junit.jupiter.params.provider.MethodSource;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import pl.codehouse.restaurant.Command;
-import pl.codehouse.restaurant.Context;
-import pl.codehouse.restaurant.ExecutionResult;
+import pl.codehouse.restaurant.kitchen.Command;
+import pl.codehouse.restaurant.kitchen.Context;
+import pl.codehouse.restaurant.kitchen.ExecutionResult;
+import pl.codehouse.restaurant.kitchen.worker.CookMenuItemCommand;
+import pl.codehouse.restaurant.kitchen.worker.KitchenWorkerRequestListener;
+import pl.codehouse.restaurant.kitchen.worker.KitchenWorkerRequestMessage;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 

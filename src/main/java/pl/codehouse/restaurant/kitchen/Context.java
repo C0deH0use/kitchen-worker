@@ -1,4 +1,4 @@
-package pl.codehouse.restaurant;
+package pl.codehouse.restaurant.kitchen;
 
 /**
  * Represents the context of a request in the restaurant system.

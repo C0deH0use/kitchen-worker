@@ -1,4 +1,4 @@
-package pl.codehouse.restaurant.shelf;
+package pl.codehouse.restaurant.kitchen.shelf;
 
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;

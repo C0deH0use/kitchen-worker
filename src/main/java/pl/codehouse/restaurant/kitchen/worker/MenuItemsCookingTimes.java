@@ -1,4 +1,4 @@
-package pl.codehouse.restaurant.worker;
+package pl.codehouse.restaurant.kitchen.worker;
 
 import java.util.HashMap;
 import java.util.Map;

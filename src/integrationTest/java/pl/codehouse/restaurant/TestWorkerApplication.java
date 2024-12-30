@@ -1,6 +1,7 @@
 package pl.codehouse.restaurant;
 
 import org.springframework.boot.SpringApplication;
+import pl.codehouse.restaurant.kitchen.WorkerApplication;
 
 public class TestWorkerApplication {
 

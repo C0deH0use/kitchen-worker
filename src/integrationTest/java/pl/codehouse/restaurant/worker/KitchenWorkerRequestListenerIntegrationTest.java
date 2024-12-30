@@ -22,9 +22,11 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.testcontainers.containers.KafkaContainer;
 import org.testcontainers.shaded.org.awaitility.Awaitility;
-import pl.codehouse.restaurant.Context;
-import pl.codehouse.restaurant.ExecutionResult;
+import pl.codehouse.restaurant.kitchen.Context;
+import pl.codehouse.restaurant.kitchen.ExecutionResult;
 import pl.codehouse.restaurant.TestcontainersConfiguration;
+import pl.codehouse.restaurant.kitchen.worker.CookMenuItemCommand;
+import pl.codehouse.restaurant.kitchen.worker.KitchenWorkerRequestMessage;
 import reactor.core.publisher.Mono;
 
 import java.nio.charset.StandardCharsets;
