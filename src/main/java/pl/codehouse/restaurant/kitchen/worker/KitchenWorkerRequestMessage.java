@@ -1,4 +1,4 @@
-package pl.codehouse.restaurant.worker;
+package pl.codehouse.restaurant.kitchen.worker;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

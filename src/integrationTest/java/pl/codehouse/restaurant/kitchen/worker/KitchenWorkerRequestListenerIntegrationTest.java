@@ -1,4 +1,4 @@
-package pl.codehouse.restaurant.worker;
+package pl.codehouse.restaurant.kitchen.worker;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -19,12 +19,13 @@ import org.springframework.context.annotation.Import;
 import org.springframework.kafka.core.DefaultKafkaProducerFactory;
 import org.springframework.kafka.test.utils.KafkaTestUtils;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.testcontainers.containers.KafkaContainer;
 import org.testcontainers.shaded.org.awaitility.Awaitility;
-import pl.codehouse.restaurant.Context;
-import pl.codehouse.restaurant.ExecutionResult;
-import pl.codehouse.restaurant.TestcontainersConfiguration;
+import pl.codehouse.restaurant.kitchen.Context;
+import pl.codehouse.restaurant.kitchen.ExecutionResult;
+import pl.codehouse.restaurant.kitchen.TestcontainersConfiguration;
 import reactor.core.publisher.Mono;
 
 import java.nio.charset.StandardCharsets;
@@ -53,7 +54,7 @@ class KitchenWorkerRequestListenerIntegrationTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-    @MockBean
+    @MockitoBean
     private CookMenuItemCommand command;
 
     @Captor
@@ -80,7 +81,7 @@ class KitchenWorkerRequestListenerIntegrationTest {
         );
         String recordPayload = createPayload(message);
         RecordHeaders recordHeaders = new RecordHeaders();
-        recordHeaders.add("__TypeId__", "pl.codehouse.restaurant.worker.KitchenWorkerRequestMessage".getBytes(StandardCharsets.UTF_8));
+        recordHeaders.add("__TypeId__", "pl.codehouse.restaurant.kitchen.worker.KitchenWorkerRequestMessage".getBytes(StandardCharsets.UTF_8));
         var producerRecord = new ProducerRecord<Integer, String>(TOPIC_NAME, null, null, requestId, recordPayload, recordHeaders);
 
         given(command.execute(any())).willReturn(Mono.just(ExecutionResult.success(Boolean.TRUE)));

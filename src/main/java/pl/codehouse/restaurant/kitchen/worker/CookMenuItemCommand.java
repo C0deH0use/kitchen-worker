@@ -1,14 +1,14 @@
-package pl.codehouse.restaurant.worker;
+package pl.codehouse.restaurant.kitchen.worker;
 
 import java.time.Duration;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.springframework.stereotype.Component;
-import pl.codehouse.restaurant.Command;
-import pl.codehouse.restaurant.Context;
-import pl.codehouse.restaurant.ExecutionResult;
-import pl.codehouse.restaurant.exceptions.ConfigurationNotFoundException;
-import pl.codehouse.restaurant.shelf.ShelfService;
+import pl.codehouse.restaurant.kitchen.Command;
+import pl.codehouse.restaurant.kitchen.Context;
+import pl.codehouse.restaurant.kitchen.ExecutionResult;
+import pl.codehouse.restaurant.kitchen.exceptions.ConfigurationNotFoundException;
+import pl.codehouse.restaurant.kitchen.shelf.ShelfService;
 import reactor.core.publisher.Mono;
 
 @Component

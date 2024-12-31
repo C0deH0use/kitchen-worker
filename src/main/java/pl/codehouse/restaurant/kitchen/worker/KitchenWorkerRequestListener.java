@@ -1,12 +1,12 @@
-package pl.codehouse.restaurant.worker;
+package pl.codehouse.restaurant.kitchen.worker;
 
 import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
-import pl.codehouse.restaurant.Command;
-import pl.codehouse.restaurant.Context;
+import pl.codehouse.restaurant.kitchen.Command;
+import pl.codehouse.restaurant.kitchen.Context;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
