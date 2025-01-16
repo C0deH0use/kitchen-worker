@@ -19,7 +19,6 @@ group = "pl.codehouse.restaurant"
 version = "0.0.1-SNAPSHOT"
 val junitVersion = "5.11.4"
 val junitPlatformVersion = "1.11.4"
-val jacksonVersion = "2.18.2"
 val cucumberVersion = "7.20.1"
 
 java {
@@ -45,9 +44,9 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	implementation("org.springframework.kafka:spring-kafka")
 
-	implementation("com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}")
-	implementation("com.fasterxml.jackson.core:jackson-core:${jacksonVersion}")
-	implementation("com.fasterxml.jackson.core:jackson-annotations:${jacksonVersion}")
+	implementation("com.fasterxml.jackson.core:jackson-databind")
+	implementation("com.fasterxml.jackson.core:jackson-core")
+	implementation("com.fasterxml.jackson.core:jackson-annotations")
 
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 }

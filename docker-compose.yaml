@@ -10,9 +10,6 @@ services:
     depends_on:
       - broker_one
       - broker_two
-    profiles:
-      - worker
-      - dependencies
 
   zookeeper:
     image: confluentinc/cp-zookeeper:7.8.0
@@ -25,6 +22,7 @@ services:
       ZOOKEEPER_TICK_TIME: 5000
     profiles:
       - dependencies
+      - worker
 
   broker_one:
     image: confluentinc/cp-server:7.8.0
