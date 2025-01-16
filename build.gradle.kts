@@ -20,7 +20,7 @@ version = "0.0.1-SNAPSHOT"
 val junitVersion = "5.11.4"
 val junitPlatformVersion = "1.10.2"
 val jacksonVersion = "2.18.2"
-val cucumberVersion = "7.15.0"
+val cucumberVersion = "7.20.1"
 
 java {
 	toolchain {
