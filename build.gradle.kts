@@ -90,7 +90,7 @@ testing {
 				implementation(project())
 				implementation(sourceSets.test.get().output)
 				implementation(sourceSets.test.get().runtimeClasspath)
-				implementation(project.dependencies.platform("org.springframework.boot:spring-boot-dependencies:3.4.1"))
+				implementation(project.dependencies.platform("org.springframework.boot:spring-boot-dependencies:3.4.2"))
 
 
 				implementation("org.springframework.boot:spring-boot-testcontainers")
