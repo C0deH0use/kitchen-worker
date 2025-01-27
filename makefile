@@ -1,7 +1,7 @@
 .PHONY: build run run-dependencies run-db destroy
 
 build:
-	docker compose build worker
+	docker compose --profile worker --profile dependencies build worker
 
 run: build
 	docker compose up worker

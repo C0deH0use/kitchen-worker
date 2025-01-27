@@ -1,15 +1,19 @@
-version: "3.8"
-
 name: kitchen-workers
 
 services:
   worker:
-    build: .
+    build:
+      context: .
+      args:
+        GITHUB_USER: ${GITHUB_USER}
+        GITHUB_TOKEN: ${GITHUB_TOKEN}
     ports:
       - "8080:8080"
     depends_on:
       - broker_one
       - broker_two
+    profiles:
+      - worker
 
   zookeeper:
     image: confluentinc/cp-zookeeper:7.8.0

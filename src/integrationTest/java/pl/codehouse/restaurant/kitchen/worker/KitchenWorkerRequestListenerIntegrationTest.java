@@ -14,7 +14,6 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Import;
 import org.springframework.kafka.core.DefaultKafkaProducerFactory;
 import org.springframework.kafka.test.utils.KafkaTestUtils;
@@ -23,8 +22,8 @@ import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.testcontainers.containers.KafkaContainer;
 import org.testcontainers.shaded.org.awaitility.Awaitility;
-import pl.codehouse.restaurant.kitchen.Context;
-import pl.codehouse.restaurant.kitchen.ExecutionResult;
+import pl.codehouse.commons.Context;
+import pl.codehouse.commons.ExecutionResult;
 import pl.codehouse.restaurant.kitchen.TestcontainersConfiguration;
 import reactor.core.publisher.Mono;
 
