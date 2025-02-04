@@ -10,7 +10,7 @@ RUN gradle clean build -x test -x integrationTest --no-daemon -Pgithub.user=${GI
 
 FROM azul/zulu-openjdk:21
 
-COPY --from=build-stage /home/gradle/build/libs/worker-*.jar /worker.jar
+COPY --from=build-stage /home/gradle/build/libs/kitchen-worker-*.jar /worker.jar
 
 
 ENTRYPOINT ["java","-jar", "/worker.jar" ]
